@@ -46,43 +46,7 @@
         Widget:
             size_hint: 1,0.03
 
-<GetDataWooly>
-    # Основной слой
+<Container2>
     BoxLayout:
-        orientation: 'vertical'
-        canvas:
-            Color:
-                rgba: (.97,.97,.97,1)
-            Rectangle:
-                pos: self.pos
-                size: self.size
-
-        # Шапка
-        BoxLayout:
-            size_hint: 1,0.1
-            canvas:
-                Color:
-                    rgba: (.27,.40,.91,1)
-                Rectangle:
-                    pos: self.pos
-                    size: self.size
-            Label:
-                text: "Dashboard"
-
-        # Вывод информации
-        BoxLayout:
-
-        # Кнопка
-        BoxLayout:
-            size_hint: 1, 0.1
-            Button:
-                text: "Получить данные"
-                background_normal: ''
-                background_color: (.27,.40,.91,1)
-                canvas.before:
-                    RoundedRectangle:
-                        pos: self.pos
-                        size: self.size
-                        radius: 8,8,8,8
-        Widget:
-            size_hint: 1, 0.1
+        Label:
+            text: "2"

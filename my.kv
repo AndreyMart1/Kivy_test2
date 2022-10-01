@@ -1,0 +1,88 @@
+<Container>
+    BoxLayout:
+        orientation: 'vertical'
+        canvas:
+            Color:
+                rgba: (.20,.20,0.20,1)
+            Rectangle:
+                size: self.size
+
+        # Шапка
+        Label:
+            markup: True
+            text: "[b]Шапка приложения[/b]"
+            font_size: 30
+            pos_hint: {'x': 0, 'top': 1}
+            size_hint: 1,0.12
+
+
+            canvas.before:
+                Color:
+                    rgba: (1,.80,0.20,1)
+                RoundedRectangle:
+                    pos: self.pos
+                    size: self.size
+                    radius: 0,0,5,5
+
+        # Заглушка
+        Label:
+            size_hint: 1,0.03
+
+        # Слой с выводом данных
+        BoxLayout:
+            size_hint: 0.98,0.2
+            pos_hint: {'center_x': 0.5}
+            canvas:
+                Color:
+                    rgba: (.29,.29,0.29,1)
+                RoundedRectangle:
+                    pos: self.pos
+                    size: self.size
+                    radius: 8,8,8,8
+
+            Label:
+                id: 'itog'
+                text: "Заполните данные ниже и нажмите 'Рассчитать'"
+        Widget:
+            size_hint: 1,0.03
+
+<GetDataWooly>
+    # Основной слой
+    BoxLayout:
+        orientation: 'vertical'
+        canvas:
+            Color:
+                rgba: (.97,.97,.97,1)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        # Шапка
+        BoxLayout:
+            size_hint: 1,0.1
+            canvas:
+                Color:
+                    rgba: (.27,.40,.91,1)
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            Label:
+                text: "Dashboard"
+
+        # Вывод информации
+        BoxLayout:
+
+        # Кнопка
+        BoxLayout:
+            size_hint: 1, 0.1
+            Button:
+                text: "Получить данные"
+                background_normal: ''
+                background_color: (.27,.40,.91,1)
+                canvas.before:
+                    RoundedRectangle:
+                        pos: self.pos
+                        size: self.size
+                        radius: 8,8,8,8
+        Widget:
+            size_hint: 1, 0.1
